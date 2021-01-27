@@ -12,8 +12,8 @@ Vos controlleurs peuvent ainsi être annotés de la manière suivante pour sécu
 @GetMapping("user")
 @PreAuthorize("hasRole('ROLE_User')")
 public AADOAuth2AuthenticatedPrincipal getUserPrincipal(Authentication authentication) {
-LOGGER.info("User has access");
-return (AADOAuth2AuthenticatedPrincipal) authentication.getPrincipal();
+  LOGGER.info("User has access");
+  return (AADOAuth2AuthenticatedPrincipal) authentication.getPrincipal();
 }
 ```
 
